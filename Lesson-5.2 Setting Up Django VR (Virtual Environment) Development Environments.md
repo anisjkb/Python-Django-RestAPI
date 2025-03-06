@@ -1,6 +1,6 @@
 # Setting Up Django Development Environments
 
-This guide provides two methods to set up Django environments, giving flexibility depending on project requirements!
+This guide provides two methods to set up Django Virtual Environment (VR) environments, giving flexibility depending on project requirements!
 Here, I discuss two favorite ways for setting Up Django Environment:
 
 -	Module 1: Setting Up a Django Environment Using Conda
@@ -11,6 +11,13 @@ Here, I discuss two favorite ways for setting Up Django Environment:
 
 ## Module 1: Setting Up a Django Environment Using Conda
 This section covers creating and managing a Django development environment with Conda.
+
+### Why Activate Your Conda Environment?
+
+Activating your Conda environment is recommended for:
+- **Dependency Management:** Different projects can have different versions of Python and dependencies.
+- **Isolation:** Avoid conflicts between different projects.
+- **Reproducibility:** Others can recreate the same environment easily.
 
 ---
 
@@ -100,7 +107,7 @@ python manage.py startapp blog
 ```
 You’ll see a new folder named `blog` in your project directory.
 
-## 7. Register the App
+## 7. Register/Connect the App
 To link the `blog` app with your Django project:
 
 1. Open the `settings.py` file in your project folder.
@@ -118,7 +125,33 @@ To link the `blog` app with your Django project:
    ]
    ```
 
-## 8. Migrate the Database
+## 8. Create a View
+
+Edit `ab_oms/views.py`:
+
+```python
+from django.http import HttpResponse
+
+def oms_index(request):
+    return HttpResponse("Hello, world. You're at the oms index.")
+```
+
+## 9. Create a URL
+
+Edit `oms/urls.py`:
+
+```python
+from django.contrib import admin
+from django.urls import path
+from ab_oms import views
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", views.oms_index),
+]
+```
+
+## 10. Migrate the Database
 Django uses migrations to handle database schema. Run the following commands:
 
 ```bash
@@ -126,7 +159,27 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-## 9. Test Your Setup
+## Using `python manage.py migrate` in Django
+
+The `python manage.py migrate` command is used to apply database migrations. 
+
+### When to Use `migrate`
+
+1. **Initial Setup:** Creates necessary tables for built-in apps.
+2. **After Model Changes:** Apply changes after running `makemigrations`.
+3. **Adding/Removing Apps:** Updates related database tables.
+4. **Upgrading Django:** Ensures schema matches updated models.
+
+### Workflow for Applying Migrations
+
+1. Make changes to your models.
+2. Run `python manage.py makemigrations`.
+3. Run `python manage.py migrate`.
+
+This ensures the database schema is in sync with your models.
+
+## 11. Test Your Setup
+Now it is the time to run the project 
 
 ### Create a Superuser to Access the Django Admin Panel
 
@@ -165,6 +218,7 @@ myproject/
 ```
 
 ## Additional Notes
+
 ### Running Django Shell
 You can interact with Django models and execute Python commands within your project using:
 
