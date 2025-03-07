@@ -39,7 +39,7 @@ cd "E:\Data Science\baab"
 ```
 > **Note:** Conda environments are stored in a central location regardless of the current directory.
 
-Create a new Conda environment named `django_env` with Python 3.10 (Python 3.10 is the current stable version, date- 05-March-2025):
+Create a new Conda environment named `django_oms_env` with Python 3.10 (Python 3.10 is the current stable version, date- 05-March-2025):
 
 ```bash
 conda create -n django_oms_env python=3.10
@@ -50,9 +50,9 @@ conda create -n django_oms_env python=3.10
 Activate the Conda environment:
 
 ```bash
-conda activate django_env
+conda activate django_oms_env
 ```
-Your command prompt will now show `(django_env)`, indicating the environment is active.
+Your command prompt will now show `(django_oms_env)`, indicating the environment is active.
 
 ### Step 3: Install Django
 Use Conda to install Django:
