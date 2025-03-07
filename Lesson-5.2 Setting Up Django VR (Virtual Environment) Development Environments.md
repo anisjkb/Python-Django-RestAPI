@@ -42,9 +42,9 @@ cd "E:\Data Science\baab"
 Create a new Conda environment named `django_env` with Python 3.10 (Python 3.10 is the current stable version, date- 05-March-2025):
 
 ```bash
-conda create -n django_env python=3.10
+conda create -n django_oms_env python=3.10
 ```
-- `-n`: Specifies the name of the environment (`django_env`).
+- `-n`: Specifies the name of the environment (`django_oms_env`). The name `django_oms_env` is not fixed. You can customize it to suit your project or preferences. The main goal is to pick a name that’s meaningful and easy to remember for you.
 - `python=3.10`: Sets the Python version for the environment.
 
 Activate the Conda environment:
@@ -71,7 +71,6 @@ This command installs Django from the Anaconda repository.
    ```bash
    cd path/to/your/project/folder (Example- E:\Data Science\baab directory:)
    ```
-   
 While in the `E:\Data Science\baab` directory, create a new Django project:
 
 2. Create a new Django project (replace `myproject` with your desired project name):
@@ -79,13 +78,11 @@ While in the `E:\Data Science\baab` directory, create a new Django project:
    ```bash
    django-admin startproject myproject
    ```
-
 3. Navigate into the project directory/folder:
 
    ```bash
    cd myproject
    ```
-
 ### Step 5: Test the Setup by running the development server
 
 Run the development server:
@@ -96,7 +93,6 @@ Run the development server:
   python manage.py runserver
   ```
 - Open your browser and go to [http://127.0.0.1:8000](http://127.0.0.1:8000). You should see the Django welcome page.
-
 
 ## 6. Create an App in the Django Project
 Django projects are organized into apps. To create an app, follow these steps:
