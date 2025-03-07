@@ -3,6 +3,7 @@ Unfortunately, Conda doesn’t allow you to directly rename an environment. Howe
 ### Export the Current Environment:
 
 Create a YAML file with the current environment details.
+(The full form of YAML is "YAML Ain't Markup Language". Initially, it stood for "Yet Another Markup Language,")
 
 ```bash
 conda env export --name django_oms_env > environment.yml
@@ -16,20 +17,20 @@ Use the exported file to create a new environment with the desired name (django3
 conda env create --name django310_env --file environment.yml
 ```
 
-### Remove the Old Environment (Optional):
-
-If you no longer need the old environment, you can remove it.
-
-```bash
-conda env remove --name django_oms_env
-```
-
 ### Activate the New Environment:
 
 Start using the newly created environment.
 
 ```bash
 conda activate django310_env
+```
+
+### Remove the Old Environment (Optional):
+
+If you no longer need the old environment, you can remove it.
+
+```bash
+conda env remove --name django_oms_env
 ```
 
 ---
