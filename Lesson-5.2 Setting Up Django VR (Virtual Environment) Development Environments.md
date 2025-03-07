@@ -110,7 +110,8 @@ While in the `E:\Data Science\baab` directory, create a new Django project:
 
 Run the development server:
 
-- Run the development server:
+-	It’s always a **Best Practice** to activate (if not activate) the correct Conda environment for project before running the development server than
+-	Run the development server:
   
   ```bash
   python manage.py runserver
@@ -120,18 +121,23 @@ Run the development server:
 ## 6. Create an App in the Django Project
 Django projects are organized into apps. To create an app, follow these steps:
 
-### Example: Create an app named `blog`
-
 ```bash
-python manage.py startapp blog
+python manage.py startapp oms
 ```
-You’ll see a new folder named `blog` in your project directory.
+
+-	Example: Create an app named `oms` (or any name you like, here i use `oms`)
+-	**Note:** Avoid naming the app with an existing Python module name.
+
+You’ll see a new folder named `oms` in your project directory.
 
 ## 7. Register/Connect the App
-To link the `blog` app with your Django project:
 
-1. Open the `settings.py` file in your project folder.
-2. Locate the `INSTALLED_APPS` list and add `'blog',` to it:
+To link the `oms` app with your Django project through `Visual Studio`:
+
+1. Open the project folder in Visual Studio Code.
+2. Open the terminal in VS Code.
+3. Open the `settings.py` file in your project folder.
+4. Locate the `INSTALLED_APPS` list and add `'oms',` to it:
 
    ```python
    INSTALLED_APPS = [
@@ -141,13 +147,13 @@ To link the `blog` app with your Django project:
        'django.contrib.sessions',
        'django.contrib.messages',
        'django.contrib.staticfiles',
-       'blog',
+       'oms',
    ]
    ```
 
 ## 8. Create a View
 
-Edit `ab_oms/views.py`:
+Edit `oms/views.py`:
 
 ```python
 from django.http import HttpResponse
@@ -158,7 +164,7 @@ def oms_index(request):
 
 ## 9. Create a URL
 
-Edit `oms/urls.py`:
+Edit `oms_project/urls.py`:
 
 ```python
 from django.contrib import admin
@@ -200,9 +206,10 @@ The `python manage.py migrate` command is used to apply database migrations.
 This ensures the database schema is in sync with your models.
 
 ## 11. Test Your Setup
+
 Now it is the time to run the project 
 
-### Create a Superuser to Access the Django Admin Panel
+# Create a Superuser to Access the Django Admin Panel
 
 ```bash
 python manage.py createsuperuser
