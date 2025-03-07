@@ -41,25 +41,26 @@ cd "E:\Data Science\baab"
 ```
 > **Note:** Conda environments are stored in a central location regardless of the current directory.
 
-Create a new Conda environment named `django_oms_env` with Python 3.10 (Python 3.10 is the current stable version, date- 05-March-2025):
+Create a new Conda environment named `django310_env` with Python 3.10 (Python 3.10 is the current stable version, date- 05-March-2025):
 
 ```bash
-conda create -n django_oms_env python=3.10
+conda create -n django310_env python=3.10
 ```
-- `-n`: Specifies the name of the environment (`django_oms_env`). The name `django_oms_env` is not fixed. You can customize it to suit your project or preferences. The main goal is to pick a name that’s meaningful and easy to remember for you.
-- `python=3.10`: Sets the Python version for the environment.
+-	`-n`: Specifies the name of the environment (`django310_env`). The name `django310_env` is not fixed. You can customize it to suit your project or preferences. The main goal is to pick a name that’s meaningful and easy to remember for you.
+-	`python=3.10`: Sets the Python version for the environment.
+-	Even though your current directory is `E:\Data Science\baab`, that directory is unrelated to where the Conda environments are stored. Conda environments are typically located in the `envs` folder inside the base Conda installation directory `(here, C:\Users\User\anaconda3\envs)`.
 
 #### ii) Activate the Conda environment:
 
 Enter the command
 
 ```bash
-conda activate django_oms_env
+conda activate django310_env
 ```
-Your command prompt will now show `(django_oms_env)`, indicating the active environment.
-It shows `(django_oms_env) PS E:\Data Science\baab>` insted of `(base) PS C:\Users\User> cd "E:\Data Science\baab"`
+Your command prompt will now show `(django310_env)`, indicating the active environment.
+It shows `(django310_env) PS E:\Data Science\baab>` insted of `(base) PS C:\Users\User> cd "E:\Data Science\baab"`
 
-Environment Name in the Prompt: `(django_oms_env) PS E:\Data Science\baab>` indicates that the `django_oms_env` environment is currently active.
+Environment Name in the Prompt: `(django310_env) PS E:\Data Science\baab>` indicates that the `django310_env` environment is currently active.
 
 ### Step 3: Install Django
 Use Conda to install Django:
