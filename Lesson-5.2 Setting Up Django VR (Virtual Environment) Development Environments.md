@@ -52,7 +52,10 @@ Activate the Conda environment:
 ```bash
 conda activate django_oms_env
 ```
-Your command prompt will now show `(django_oms_env)`, indicating the environment is active.
+Your command prompt will now show `(django_oms_env)`, indicating the active environment.
+It shows `(django_oms_env) PS E:\Data Science\baab>` insted of `(base) PS C:\Users\User> cd "E:\Data Science\baab"`
+
+Environment Name in the Prompt: `(django_oms_env) PS E:\Data Science\baab>` indicates that the `django_oms_env` environment is currently active.
 
 ### Step 3: Install Django
 Use Conda to install Django:
