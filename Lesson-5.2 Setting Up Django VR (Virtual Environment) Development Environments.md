@@ -63,6 +63,7 @@ It shows `(django310_env) PS E:\Data Science\baab>` insted of `(base) PS C:\User
 Environment Name in the Prompt: `(django310_env) PS E:\Data Science\baab>` indicates that the `django310_env` environment is currently active.
 
 ### Step 3: Install Django
+
 Use Conda to install Django:
 
 ```bash
@@ -70,9 +71,12 @@ conda install -c anaconda django
 ```
 This command installs Django from the Anaconda repository.
 
-- `-c anaconda`: Ensures that Django is installed from the curated Anaconda repository.
+-	`-c anaconda`: Ensures that Django is installed from the curated Anaconda repository.
+-	When you execute the command `conda install -c anaconda django`, It installs the Django library and its dependencies into the active Conda environment's directory. The installation doesn't create a Django project; it only makes Django available for use within that specific environment.
+-	The library files will be placed inside the `site-packages` folder of the active Conda environment. For example: `C:\Users\User\anaconda3\envs\django310_env\Lib\site-packages\django`
+-	Once Django is installed, you have to create a project using Step 4.
 
-### Step 4: Start a Django Project
+### Step 4: Create and Start a Django Project
 
 1. Navigate to your desired directory where you want to create the project:
 
@@ -86,12 +90,23 @@ While in the `E:\Data Science\baab` directory, create a new Django project:
    ```bash
    django-admin startproject myproject
    ```
+   -	This will create the Django project `myproject` in your current working directory (e.g., `E:\Data Science\baab`)
+   
 3. Navigate into the project directory/folder:
 
    ```bash
    cd myproject
    ```
-### Step 5: Test the Setup by running the development server
+
+4. Apply initial migrations for built-in apps:
+
+   ```bash
+   python manage.py migrate
+   ```
+
+-	Running migrations for the built-in apps first ensures everything is initialized correctly. 
+   
+### Step 5: Run/Test the Setup by running the development server
 
 Run the development server:
 
@@ -156,13 +171,14 @@ urlpatterns = [
 ]
 ```
 
-## 10. Migrate the Database
+## 10. Migrate the Database- Define models in your app, then run:
 Django uses migrations to handle database schema. Run the following commands:
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
+-	You can then define your own models and run migrations for your custom app as needed.
 
 ## Using `python manage.py migrate` in Django
 
