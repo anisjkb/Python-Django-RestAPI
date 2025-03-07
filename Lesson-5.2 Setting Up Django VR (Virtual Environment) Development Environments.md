@@ -29,9 +29,10 @@ After installation, verify Anaconda by opening a terminal and running:
 ```bash
 conda --version
 ```
-
 ### Step 2: Create a Conda Environment
-Navigate to the directory where you'll manage your project files. For instance:
+
+-   Open Start> Anaconda PowerShell Prompt
+-   Navigate to the directory where you'll manage your project files. For instance:
 
 ```bash
 cd "E:\Data Science\baab"
