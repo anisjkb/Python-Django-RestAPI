@@ -29,7 +29,9 @@ After installation, verify Anaconda by opening a terminal and running:
 ```bash
 conda --version
 ```
-### Step 2: Create a Conda Environment
+### Step 2: Create and Activate the Conda Environment
+
+#### i) Create the Conda Environment:
 
 -   Open Start> Anaconda PowerShell Prompt
 -   Navigate to the directory where you'll manage your project files. For instance:
@@ -47,7 +49,9 @@ conda create -n django_oms_env python=3.10
 - `-n`: Specifies the name of the environment (`django_oms_env`). The name `django_oms_env` is not fixed. You can customize it to suit your project or preferences. The main goal is to pick a name that’s meaningful and easy to remember for you.
 - `python=3.10`: Sets the Python version for the environment.
 
-Activate the Conda environment:
+#### ii) Activate the Conda environment:
+
+Enter the command
 
 ```bash
 conda activate django_oms_env
