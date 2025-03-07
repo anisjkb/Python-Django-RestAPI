@@ -1,4 +1,4 @@
-##### Setting up Django can be done in several ways, and the right method depends on the project's requirements, the development environment, and personal preference. Here's a comparison of the most common methods, including their advantages and disadvantages:
+#### Setting up Django can be done in several ways, and the right method depends on the project's requirements, the development environment, and personal preference. Here's a comparison of the most common methods, including their advantages and disadvantages:
 
 ### 1. Global Installation  
 **Method:** Install Django globally using `pip install django`.
