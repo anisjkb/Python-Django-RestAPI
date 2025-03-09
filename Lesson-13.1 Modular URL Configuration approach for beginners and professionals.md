@@ -161,10 +161,10 @@ By adding namespaces (`app_name` in `urls.py`), you can avoid URL name conflicts
 
 ---
 
-### **Why Modular URLs Win**
+### **Why Modular URLs perfect**
 - Clear structure and separation of concerns make it easy for team collaboration.
 - Scales beautifully as your project grows or new functionalities are added.
 - Prepares you for integrating APIs, user authentication, and modern tools.
 - Namespaces eliminate conflicts and clarify URL usage.
 
-This approach is highly recommended for beginners and professionals alike, as it follows Django's built-in philosophy: **"Explicit is better than implicit."** Stick to this, and you'll be future-ready! Let me know if you'd like guidance on any specific part or want to dive deeper into advanced concepts.
+This approach is highly recommended for beginners and professionals alike, as it follows Django's built-in philosophy: **"Explicit is better than implicit."**
