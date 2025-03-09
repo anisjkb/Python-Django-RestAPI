@@ -81,7 +81,7 @@ Create a `urls.py` file in each app to handle its URLs.
 **Blog App URLs (`blog/urls.py`)**
 ```python
 from django.urls import path
-from . import views
+from . import views #The dot (.) refers that views.py is in the same directory as the module containing this import statement.
 
 app_name = 'blog'
 
