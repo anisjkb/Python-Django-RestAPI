@@ -168,3 +168,8 @@ By adding namespaces (`app_name` in `urls.py`), you can avoid URL name conflicts
 - Namespaces eliminate conflicts and clarify URL usage.
 
 This approach is highly recommended for beginners and professionals alike, as it follows Django's built-in philosophy: **"Explicit is better than implicit."**
+---
+
+#   Lesson-13.2 describe Modular URL Configuration for advanced developer.
+
+---
