@@ -158,7 +158,6 @@ By adding namespaces (`app_name` in `urls.py`), you can avoid URL name conflicts
 
 5. **Follow DRY Principles:**
    - Avoid repetitive code by using reusable components, shared views, and utilities.
-
 ---
 
 ### **Why Modular URLs perfect**
@@ -170,6 +169,6 @@ By adding namespaces (`app_name` in `urls.py`), you can avoid URL name conflicts
 This approach is highly recommended for beginners and professionals alike, as it follows Django's built-in philosophy: **"Explicit is better than implicit."**
 ---
 
-#   Lesson-13.2 describe Modular URL Configuration for advanced developer.
+##  Lesson-13.2 describe Modular URL Configuration for advanced developer.
 
 ---
