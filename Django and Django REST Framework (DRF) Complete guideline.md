@@ -216,8 +216,6 @@ urlpatterns += [
 
 ##### Scenario: This is a Django step because it involves server-side rendering using Django templates.
 
----
-
 ### **9. Add HTML and API Routes**
 Include the `employees` app URLs in the main project’s `urls.py`:
 ```python
@@ -231,18 +229,13 @@ urlpatterns = [
 ```
 
 **Scenario**: Both Django (HTML rendering) and Django REST Framework (API routes) are covered here.
-
-
 ---
 ### **Project Workflow Summary**
 1. Django handles the admin panel and front-end rendering.
 2. DRF provides a RESTful API to interact with employee data.
 3. The database, managed by Django ORM, is shared between both.
 
----
-
 ### **Project Summary**
-
 | Step                             | Scenario                        |
 |----------------------------------|---------------------------------|
 | Setting Up the Environment       | Common to Django and DRF        |
@@ -258,3 +251,4 @@ urlpatterns = [
 -	By integrating Django and DRF, this project showcases how they complement each other
 -	Django for server-side rendering and admin panels, and DRF for building robust APIs.
 -	This step-by-step example demonstrates how Django and Django REST Framework complement each other.
+---
