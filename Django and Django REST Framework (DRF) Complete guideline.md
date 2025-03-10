@@ -62,7 +62,7 @@ Install necessary tools:
 pip install django djangorestframework
 ```
 
-#####   Scenario: This is common to both Django and Django REST Framework because both require setting up a Python environment.
+#####	Scenario: This is common to both Django and Django REST Framework because both require setting up a Python environment.
 
 #### **2. Create a Django Project**
 ```bash
@@ -120,7 +120,7 @@ python manage.py runserver
 ```
 
 #### **6. Create an API Using DRF**
-In `employees/serializers.py`, define a serializer:
+- **Serializer**: Define a serializer for the `Employee` model in `serializers.py`.
 ```python
 from rest_framework import serializers
 from .models import Employee
@@ -130,8 +130,7 @@ class EmployeeSerializer(serializers.ModelSerializer):
         model = Employee
         fields = '__all__'
 ```
-
-Define API views in `employees/views.py`:
+- **View**: Create an API view using DRF’s `viewsets` in `views.py`.
 ```python
 from rest_framework import viewsets
 from .models import Employee
@@ -141,8 +140,7 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 ```
-
-Set up routes in `employees/urls.py`:
+- **Router**: Use DRF’s routing system in `urls.py`.
 ```python
 from rest_framework.routers import DefaultRouter
 from .views import EmployeeViewSet
@@ -153,7 +151,7 @@ router.register(r'employees', EmployeeViewSet, basename='employee')
 urlpatterns = router.urls
 ```
 
-Include the `employees` URLs in `employee_mgmt/urls.py`:
+-	Include the `employees` URLs in `employee_mgmt/urls.py`:
 ```python
 from django.urls import path, include
 
@@ -163,7 +161,7 @@ urlpatterns = [
 ]
 ```
 
-#####	**Scenario:**	This is a Django REST Framework step because it involves creating RESTful API endpoints.
+**Scenario**: This is a Django REST Framework step because it involves creating RESTful API endpoints.
 
 #### **7. Test the API**
 Run the server and test the endpoints:
@@ -172,7 +170,7 @@ Run the server and test the endpoints:
 - Update an employee: `PUT /api/employees/<id>/`
 - Delete an employee: `DELETE /api/employees/<id>/`
 
-#####	**Scenario:**	This is a Django REST Framework step because the endpoints are part of the API.
+**Scenario**: This is a Django REST Framework step because the endpoints are part of the API.
 
 #### **8. Add a Template for HTML Rendering**
 
@@ -216,7 +214,7 @@ urlpatterns += [
 ]
 ```
 
-### **	Scenario:** This is a Django step because it involves server-side rendering using Django templates.
+##### Scenario: This is a Django step because it involves server-side rendering using Django templates.
 
 ---
 
@@ -231,168 +229,15 @@ urlpatterns = [
     path('', include('employees.urls')),     # Django-related
 ]
 ```
+
 **Scenario**: Both Django (HTML rendering) and Django REST Framework (API routes) are covered here.
+
 
 ---
 ### **Project Workflow Summary**
 1. Django handles the admin panel and front-end rendering.
 2. DRF provides a RESTful API to interact with employee data.
 3. The database, managed by Django ORM, is shared between both.
-
----
-
-Here’s the updated step-by-step project workflow with a note at the end of each step to clarify whether it falls under **Django** or **Django REST Framework**:
-
----
-
-### **1. Setting Up the Environment**
-- Install Django and Django REST Framework using pip.
-```bash
-pip install django djangorestframework
-```
-**Scenario**: This is common to both Django and Django REST Framework because both require setting up a Python environment.
-
----
-
-### **2. Create a Django Project**
-```bash
-django-admin startproject employee_mgmt
-cd employee_mgmt
-```
-**Scenario**: This is a Django step because it involves creating the base project structure provided by Django.
-
----
-
-### **3. Create an App**
-```bash
-python manage.py startapp employees
-```
-**Scenario**: This is a Django step because apps are core units of a Django project.
-
----
-
-### **4. Define a Model**
-Create the `Employee` model in `models.py`:
-```python
-from django.db import models
-
-class Employee(models.Model):
-    name = models.CharField(max_length=100)
-    position = models.CharField(max_length=50)
-    salary = models.DecimalField(max_digits=10, decimal_places=2)
-
-    def __str__(self):
-        return self.name
-```
-Run migrations:
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-**Scenario**: This is a Django step because models are part of Django's ORM (Object-Relational Mapping).
-
----
-
-### **5. Create Admin Interface**
-Register the model in `admin.py` and create a superuser to access the admin interface.
-```python
-from django.contrib import admin
-from .models import Employee
-
-admin.site.register(Employee)
-```
-**Scenario**: This is a Django step because the admin panel is a feature of Django.
-
----
-
-### **6. Create an API Using DRF**
-- **Serializer**: Define a serializer for the `Employee` model in `serializers.py`.
-```python
-from rest_framework import serializers
-from .models import Employee
-
-class EmployeeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Employee
-        fields = '__all__'
-```
-- **View**: Create an API view using DRF’s `viewsets` in `views.py`.
-```python
-from rest_framework import viewsets
-from .models import Employee
-from .serializers import EmployeeSerializer
-
-class EmployeeViewSet(viewsets.ModelViewSet):
-    queryset = Employee.objects.all()
-    serializer_class = EmployeeSerializer
-```
-- **Router**: Use DRF’s routing system in `urls.py`.
-```python
-from rest_framework.routers import DefaultRouter
-from .views import EmployeeViewSet
-
-router = DefaultRouter()
-router.register(r'employees', EmployeeViewSet, basename='employee')
-
-urlpatterns = router.urls
-```
-**Scenario**: This is a Django REST Framework step because it involves creating RESTful API endpoints.
-
----
-
-### **7. Test the API**
-Run the server and test the API endpoints:
-- `GET /api/employees/` to list all employees.
-- `POST /api/employees/` to create a new employee.
-- `PUT /api/employees/<id>/` to update an employee.
-- `DELETE /api/employees/<id>/` to delete an employee.
-**Scenario**: This is a Django REST Framework step because the endpoints are part of the API.
-
----
-
-### **8. Add a Template for HTML Rendering**
-- Create a view to render an employee list in HTML in `views.py`:
-```python
-from django.shortcuts import render
-from .models import Employee
-
-def employee_list(request):
-    employees = Employee.objects.all()
-    return render(request, 'employees/employee_list.html', {'employees': employees})
-```
-- Create an HTML template in `templates/employees/employee_list.html`:
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Employee List</title>
-</head>
-<body>
-    <h1>Employees</h1>
-    <ul>
-        {% for employee in employees %}
-        <li>{{ employee.name }} - {{ employee.position }} - ${{ employee.salary }}</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
-```
-**Scenario**: This is a Django step because it involves server-side rendering using Django templates.
-
----
-
-### **9. Add HTML and API Routes**
-Include the `employees` app URLs in the main project’s `urls.py`:
-```python
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('employees.urls')),  # DRF-related
-    path('', include('employees.urls')),     # Django-related
-]
-```
-**Scenario**: Both Django (HTML rendering) and Django REST Framework (API routes) are covered here.
 
 ---
 
