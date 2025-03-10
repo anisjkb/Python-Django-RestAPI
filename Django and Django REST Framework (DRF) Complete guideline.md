@@ -1,7 +1,6 @@
 ##	Django and Django REST Framework (DRF) Complete Guideline
 
-Dive into the details of Python Django and Django REST Framework (DRF), their differences, overlap, use cases, and requirements for mastery. I'll also walk you through an example project, step by step, that uses both Django and DRF to solidify these concepts.
-
+Dive into the details of Python Django and Django REST Framework (DRF), their differences, overlap, use cases, and requirements for mastery.
 ---
 
 ### **What are Django and Django REST Framework?**
