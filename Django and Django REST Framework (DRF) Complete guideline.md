@@ -62,7 +62,7 @@ Install necessary tools:
 pip install django djangorestframework
 ```
 
-###	**Scenario:** This is common to both Django and Django REST Framework because both require setting up a Python environment.
+#####	**Scenario:** This is common to both Django and Django REST Framework because both require setting up a Python environment.
 
 #### **2. Create a Django Project**
 ```bash
@@ -70,7 +70,7 @@ django-admin startproject employee_mgmt
 cd employee_mgmt
 ```
 
-###	**Scenario:**	This is a Django step because it involves creating the base project structure provided by Django.
+#####	**Scenario:**	This is a Django step because it involves creating the base project structure provided by Django.
 
 #### **3. Create an App**
 ```bash
@@ -78,7 +78,7 @@ python manage.py startapp employees
 ```
 Add `employees` and `rest_framework` to `INSTALLED_APPS` in `settings.py`.
 
-###	**Scenario:**	This is a Django step because apps are core units of a Django project.
+#####	**Scenario:**	This is a Django step because apps are core units of a Django project.
 
 #### **4. Define a Model**
 Create a `models.py` file in the `employees` app:
@@ -99,7 +99,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-###	**Scenario:**	Scenario: This is a Django step because models are part of Django's ORM (Object-Relational Mapping).
+#####	**Scenario:**	This is a Django step because models are part of Django's ORM (Object-Relational Mapping).
 
 #### **5. Create Admin Interface**
 Register the model in `admin.py`:
@@ -110,7 +110,7 @@ from .models import Employee
 admin.site.register(Employee)
 ```
 
-###	**Scenario:**	This is a Django step because the admin panel is a feature of Django.
+#####	**Scenario:**	This is a Django step because the admin panel is a feature of Django.
 
 
 Access the Django Admin panel for CRUD operations:
@@ -163,7 +163,7 @@ urlpatterns = [
 ]
 ```
 
-###	**Scenario:**	This is a Django REST Framework step because it involves creating RESTful API endpoints.
+#####	**Scenario:**	This is a Django REST Framework step because it involves creating RESTful API endpoints.
 
 #### **7. Test the API**
 Run the server and test the endpoints:
@@ -172,7 +172,7 @@ Run the server and test the endpoints:
 - Update an employee: `PUT /api/employees/<id>/`
 - Delete an employee: `DELETE /api/employees/<id>/`
 
-###	**Scenario:**	This is a Django REST Framework step because the endpoints are part of the API.
+#####	**Scenario:**	This is a Django REST Framework step because the endpoints are part of the API.
 
 #### **8. Add a Template for HTML Rendering**
 
@@ -397,6 +397,7 @@ urlpatterns = [
 ---
 
 ### **Project Summary**
+
 | Step                             | Scenario                        |
 |----------------------------------|---------------------------------|
 | Setting Up the Environment       | Common to Django and DRF        |
