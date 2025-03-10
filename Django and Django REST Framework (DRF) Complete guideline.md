@@ -1,7 +1,5 @@
 ##	Django and Django REST Framework (DRF) Complete Guideline
 Dive into the details of Python Django and Django REST Framework (DRF), their differences, overlap, use cases, and requirements for mastery.
----
-
 ### **What are Django and Django REST Framework?**
 1. **Django Framework**:
    - Django is a high-level web framework for building web applications efficiently.
