@@ -62,7 +62,7 @@ Install necessary tools:
 pip install django djangorestframework
 ```
 
-#####	**Scenario:** This is common to both Django and Django REST Framework because both require setting up a Python environment.
+#####   Scenario: This is common to both Django and Django REST Framework because both require setting up a Python environment.
 
 #### **2. Create a Django Project**
 ```bash
