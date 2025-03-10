@@ -228,7 +228,7 @@ urlpatterns = [
 ]
 ```
 
-**Scenario**: Both Django (HTML rendering) and Django REST Framework (API routes) are covered here.
+##### Scenario: Both Django (HTML rendering) and Django REST Framework (API routes) are covered here.
 ---
 ### **Project Workflow Summary**
 1. Django handles the admin panel and front-end rendering.
