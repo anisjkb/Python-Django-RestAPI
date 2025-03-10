@@ -155,4 +155,8 @@ Use the namespace in templates or when reversing URLs:
 ### **Final Recommendation**
 Considering you're advanced, this modular, CBV-based approach with DRF integration is future-proof and robust. It not only aligns with the best practices but also prepares your project for modern requirements like APIs, cloud deployment, or scaling to larger teams and more complex architectures.
 
+<<<<<<< HEAD
 ###	In Lesson-14 we will create a templates folder, rendering HTML template files for the views we built earlier, and explain this step-by-step.
+=======
+###	In Lesson-14 we will create a templates folder, rendering HTML template files for the views we built earlier, and explain this step-by-step.
+>>>>>>> 845962f (Update Content and New file)

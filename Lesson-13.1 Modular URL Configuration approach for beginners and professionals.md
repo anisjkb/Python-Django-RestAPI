@@ -171,4 +171,8 @@ This approach is highly recommended for beginners and professionals alike, as it
 
 ##  Lesson-13.2 describe Modular URL Configuration for advanced developer.
 
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> 845962f (Update Content and New file)

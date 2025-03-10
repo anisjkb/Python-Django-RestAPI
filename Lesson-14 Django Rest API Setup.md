@@ -290,3 +290,5 @@ Test API endpoints via Postman or cURL:
 curl http://127.0.0.1:8000/blog/posts/
 curl http://127.0.0.1:8000/store/products/
 ```
+---
+### Lesson-15 Django REST Framework (DRF) advanced features
