@@ -94,6 +94,20 @@ python manage.py startapp employees
 ```
 Add `employees` and `rest_framework` to `INSTALLED_APPS` in `settings.py`.
 
+```
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "oms",
+    "machine_learning",
+    "employees",
+    "rest_framework",
+]
+```
 #####	**Scenario:**	This is a Django step because apps are core units of a Django project.
 
 #### **4. Define a Model**
