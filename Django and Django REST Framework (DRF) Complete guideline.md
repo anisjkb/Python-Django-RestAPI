@@ -63,7 +63,7 @@ pip install django djangorestframework
 
 **Process-B** If you plan to set up a Django Virtual Environment (VR) using **Conda** follow below steps
 
-### **Setting Up the Conda Environment**
+#### **Conda Environment**
 
 - **Step**: Create a Conda environment and install Django and Django REST Framework.
 ```bash
