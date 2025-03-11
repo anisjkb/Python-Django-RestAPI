@@ -1,5 +1,7 @@
 ##	Django and Django REST Framework (DRF) Complete Guideline
 Dive into the details of Python Django and Django REST Framework (DRF), their differences, overlap, use cases, and requirements for mastery.
+---
+
 ### **What are Django and Django REST Framework?**
 1. **Django Framework**:
    - Django is a high-level web framework for building web applications efficiently.
@@ -63,7 +65,7 @@ pip install django djangorestframework
 
 **Process-B** If you plan to set up a Django Virtual Environment (VR) using **Conda** follow below steps
 
-#### **Conda Environment**
+### **Setting Up the Conda Environment**
 
 - **Step**: Create a Conda environment and install Django and Django REST Framework.
 ```bash
@@ -94,20 +96,6 @@ python manage.py startapp employees
 ```
 Add `employees` and `rest_framework` to `INSTALLED_APPS` in `settings.py`.
 
-```
-INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-    "oms",
-    "machine_learning",
-    "employees",
-    "rest_framework",
-]
-```
 #####	**Scenario:**	This is a Django step because apps are core units of a Django project.
 
 #### **4. Define a Model**
