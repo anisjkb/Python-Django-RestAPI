@@ -123,7 +123,7 @@ class Employee(models.Model):
     def __str__(self):
         return self.name
 ```
--	Here's the SQL query to create a table equivalent to your Django model Employee (This is just for compression):
+-	Here's the SQL query to create a table equivalent to your Django model Employee (This is just for compression btween Model and SQL):
 ```sql
 CREATE TABLE Employee (
     id SERIAL PRIMARY KEY, -- Auto-incrementing primary key
