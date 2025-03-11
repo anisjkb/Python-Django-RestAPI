@@ -123,6 +123,23 @@ class Employee(models.Model):
     def __str__(self):
         return self.name
 ```
+-	Here's the SQL query to create a table equivalent to your Django model Employee (This is just for compression):
+```sql
+CREATE TABLE Employee (
+    id SERIAL PRIMARY KEY, -- Auto-incrementing primary key
+    name VARCHAR(100) NOT NULL, -- Name with a maximum length of 100 characters
+    position VARCHAR(50) NOT NULL, -- Position with a maximum length of 50 characters
+    salary DECIMAL(10, 2) NOT NULL -- Salary with up to 10 digits, including 2 decimal places
+);
+```
+
+In this schema:
+
+- `id` is an auto-incrementing primary key added by Django automatically to every model unless you specify otherwise.
+- `name` and `position` are non-null character fields with constraints on maximum lengths (`100` and `50`, respectively).
+- `salary` is a non-null decimal field, with a precision of up to `10` digits, including `2` decimal places.
+```
+
 Run migrations:
 ```bash
 python manage.py makemigrations
