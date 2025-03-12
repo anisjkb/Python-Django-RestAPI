@@ -1,5 +1,4 @@
-Integrate the Template Files file with Views file
-
+#	Integrate the Template Files file with Views file
 Create Template Folder and Rendering Template Files
 
 ###	Step-1: Create 'templates' folder in the outer project folder 'oms_project'
