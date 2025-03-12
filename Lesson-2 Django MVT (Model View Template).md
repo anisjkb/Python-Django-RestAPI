@@ -1,5 +1,4 @@
 # What is MVT?
-
 Ans: Django is based on MVT (Model,View,Template) architecture. MVT is a software design pattern for developing a web application.
 
 # MVT Structure
