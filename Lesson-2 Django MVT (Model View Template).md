@@ -2,6 +2,33 @@
 
 Ans: Django is based on MVT (Model,View,Template) architecture. MVT is a software design pattern for developing a web application.
 
+# MVT Structure
+
+![MVT Structure](.\Python Django & RestAPI\Image_MVT_structure.png)
+
+## Description of the Image
+The image represents the Model-View-Template (MVT) structure used in Django framework development. It highlights the interaction flow:
+
+- **User:** Initiates interaction through a request (e.g., entering a URL).
+- **Django Framework:** Acts as the core system managing the flow between user input and web output.
+- **URL to View:** The URL directs to the corresponding View, which processes the request.
+- **View to Model and Template:**
+  - **Model:** Handles data and communicates with the database.
+  - **Template:** Handles the presentation logic and renders the output.
+
+This cycle ensures a smooth request-response workflow in Django web applications.
+
+## Additional Details
+
+- **Key Elements:**
+  - `User` sends a request.
+  - `View` processes logic and interacts with `Model` and `Template`.
+  - Final output is rendered back to the `User`.
+
+- **Learning Pathways:**
+  - **Django Basics to Advanced**: Start from understanding this structure to building advanced web applications.
+  - **Study Resources**: Framework guides like AI Quest or Study Mart are excellent supplementary materials.
+
 # MVT vs. MVC Comparison
 
 | Model View Template (MVT)           | Model View Controller (MVC)           |
