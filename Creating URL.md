@@ -1,6 +1,6 @@
 ##	Create URL for Multiple Apps Using Include Function‪
 
-Step-1: Create `urls.py` file in every Apps
+**Step-1:** Create `urls.py` file in every Apps
 
 Question: Why we Create `urls.py` file in every Apps?
 Ans: We create `urls.py` file in `employees` App because Into this (`urls.py`) file we define url for the function of `views.py`
@@ -15,7 +15,7 @@ urlpatterns = [
 ]
 ```
 
-Step-2: Connect the `urls.py` file of app with main project (here inner project- oms_project) `urls.py`
+**Step-2:** Connect the `urls.py` file of app with main project (here inner project- oms_project) `urls.py`
 
 Example: Connect the `urls.py` file of `employees` app with main project `urls.py`
 
