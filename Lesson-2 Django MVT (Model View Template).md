@@ -3,7 +3,7 @@ Ans: Django is based on MVT (Model,View,Template) architecture. MVT is a softwar
 
 # MVT Structure
 
-![MVT Structure](.\Image_MVT_structure)
+![MVT Structure](Image_MVT_structure.png)
 
 ## Description of the Image
 The image represents the Model-View-Template (MVT) structure used in Django framework development. It highlights the interaction flow:
