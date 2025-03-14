@@ -1,7 +1,7 @@
 #	Project and App directory structure:
 This file provides an overview of the directory structure for the `OMS_PROJECT`. Here I take `OMS_PROJECT` as an example.
 
-![MVT Structure](Project & App Structure Image.png)
+![MVT Structure](Project_App_Structure_Image.png)
 
 ##	Project Directory: OMS_PROJECT
 
