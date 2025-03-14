@@ -1,8 +1,12 @@
-#	Integrate the Template Files file with Views file
-Create Template Folder and Rendering Template Files
+#	Create Template Folder, Create Template Files (.html), Integrate the Template Files with Views file
+-	Create `Template Folder` and Rendering `Template Files`
+-	Create `Folder` Inside `Template Folder` for App
+-	Create Template Files (.html)
+-	Integrate the Template Files with Views file
 
 ###	Step-1: Create 'templates' folder in the outer project folder 'oms_project'
-Templet folder can't create inner project folder it shall always be created in the outer project folder
+
+-	Templet folder can't create inner project folder it shall always be created in the outer project folder
 
 ###	Step-2: Add 'templates' folder in the main project
 	i) Go to inner project folder 'oms_project' > 'settings.py' file 

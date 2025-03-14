@@ -1,42 +1,41 @@
-##	Django Template Language (DTL) work with Variable
+##	How Django Template Language (DTL) work with Variable
 
-Django Template Language (DTL) is a templating system provided by Django to dynamically render HTML by injecting variables, logic, and control structures. It separates presentation logic (HTML) from business logic (views), allowing data passed from views to be displayed in templates efficiently.
+Django Template Language (DTL) is a templating system provided by Django to dynamically render HTML by injecting variables, 
+logic, and control structures. It separates presentation logic (HTML) from business logic (views), 
+allowing data passed from views to be displayed in templates efficiently.
 
 ---
 
 ### **How DTL Works with Variables**
 
-1. **Passing Variables from Views to Templates:**
-   Variables are passed to templates using the `render()` function in views. The `render()` function takes three arguments:
-   - The request object.
-   - The template name.
-   - A dictionary containing variables and their values (referred to as the **context**).
+1. Declear variable in App's view file. Example- App `Machine_Learning` and it view file is `view.py`
 
-   **Example in a View:**
-   ```python
-   from django.shortcuts import render
+```
+	context = {'username': 'Anisuzzaman','age': 43}	# context is a dictionary type variable
+```
 
-   def home(request):
-       context = {
-           'username': 'Md',
-           'age': 25
-       }
-       return render(request, 'home.html', context)
+2. Passing Variables from Views `view.py` to Templates `machine_learning/machine_learning.html`:
+	
+	-	Variables are passed to templates using the `render()` function in views.
+	-	The `render()` function takes three arguments:
+		- The request object `request'
+		- The template name `machine_learning.html`
+		- The variables and their values (referred to as the **context**).
+   ``` view.js file
+   
+	def machine_learning(request):
+		context = {'username': 'Anisuzzaman','age': 43} # context is a dictionary type variable
+		return render(request, 'machine_learning/machine_learning.html', context) # Here `machine_learning/machine_learning.html` means template folder (machine_learning) and template `machine_learning_index.html`
+   
    ```
 
-2. **Accessing Variables in Templates:**
-   Variables in the context dictionary can be accessed in templates using double curly braces (`{{ }}`).
+2. Accessing Variables in Templates `machine_learning.html`:
+
+   Variables in the `context` dictionary can be accessed in templates using double curly braces (`{{ }}`).
 
    **Example in a Template:**
    ```html
-   <h1>Welcome, {{ username }}</h1>
-   <p>You are {{ age }} years old.</p>
-   ```
-
-   **Rendered Output:**
-   ```html
-   <h1>Welcome, Md</h1>
-   <p>You are 25 years old.</p>
+		<h1>I am {{ username }} Learning ML {{ age }} years old</h1>
    ```
 
 3. **Default Behavior for Missing Variables:**
@@ -150,7 +149,6 @@ Yes, we did use DTL in the previous discussion when creating the templates for t
        {% endfor %}
    </ul>
    ```
-
    **Rendered Output:**
    ```html
    <h1>Blog Posts</h1>
@@ -159,7 +157,6 @@ Yes, we did use DTL in the previous discussion when creating the templates for t
        <li>Post 2 by John</li>
    </ul>
    ```
-
 ---
 
 ### **Conclusion**
